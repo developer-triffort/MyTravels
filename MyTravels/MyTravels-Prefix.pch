@@ -1,0 +1,42 @@
+//
+// Prefix header for all source files of the 'MyTravels' target in the 'MyTravels' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#define SELECTED_BACKGROUND_FRAME CGRectMake(147, 150, 730, 530);
+#define BACKGROUND_FRAME CGRectMake(147, 768, 730, 530);
+
+#define SWITCH_PORTRAIT_FRAME CGRectMake(210, 10, 60, 35)
+#define SWITCH_LANDSCAPE_FRAME CGRectMake(360, 10, 60, 35)
+
+#define STEPPER_PORTRAIT_FRAME CGRectMake(190, 10, 80, 35)
+#define STEPPER_LANDSCAPE_FRAME CGRectMake(350, 10, 80, 35)
+
+#define COLOR_PORTRAIT_FRAME CGRectMake(240, 5, 45, 35)
+#define COLOR_LANDSCAPE_FRAME CGRectMake(390, 5, 45, 35)
+
+#define Font_Name @"FontName"
+#define Font_Color @"FontColor"
+#define Font_Size @"FontSize"
+
+#define Cap_Font_Name @"CapFontName"
+#define Cap_Font_Color @"CapFontColor"
+#define Cap_Font_Size @"Cap_Font_Size"
+
+#define FBAPP_ID @"540835462612535"
+#define FBAPP_KEY @"d50c1d3bfc84be3f29636ae749debfa2"
+
+#define ADMOB_PUBLISHER_ID @"a1511b7def0cfa5"
+#define REVMOB_ID @"510658a18e5bd7120000003a"
+#define ADWHIRL_KEY @"9ef6f152f4b64521b461a38441acb150"

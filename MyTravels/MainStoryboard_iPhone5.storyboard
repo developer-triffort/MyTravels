@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="khz-Ae-jgR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="g2M-0k-G3s">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="khz-Ae-jgR" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sX1-iL-ejF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SwM-6t-NSI" kind="relationship" relationship="rootViewController" id="FIR-ew-bs3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wh5-12-Bn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="-33"/>
+        </scene>
+        <!--Home View Controller - MyTravels?-->
+        <scene sceneID="bfh-nD-0OE">
+            <objects>
+                <viewController id="SwM-6t-NSI" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWC-ex-h14">
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MyTravels?" id="H2R-zj-rjT"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="4SR-QJ-klP" kind="push" id="v4n-fe-oqN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbl-Vc-AkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="-51"/>
+        </scene>
+        <!--Editing View Controller - MyTravels?-->
+        <scene sceneID="Vg2-Ci-mDl">
+            <objects>
+                <viewController storyboardIdentifier="EditingController_iPhone5" id="4SR-QJ-klP" customClass="EditingViewController" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vsT-vD-b2y">
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" id="C7H-Je-t40">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="hnU-qQ-6vb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="3" maxValue="80" id="228-ym-iCs">
+                                        <rect key="frame" x="70" y="64" width="178" height="23"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <connections>
+                                            <action selector="eraserSliderAction:" destination="4SR-QJ-klP" eventType="touchDragInside" id="Ozj-zf-GV3"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <tabBar contentMode="scaleToFill" id="kfF-ek-bIC">
+                                <rect key="frame" x="0.0" y="475" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Move" image="hand.png" id="rZ1-fN-IVU"/>
+                                    <tabBarItem tag="1" title="Erase" image="Erase.png" id="0Pk-QP-HfQ"/>
+                                    <tabBarItem tag="2" title="UnErase" image="Unerase.png" id="hGg-Bj-Crm"/>
+                                    <tabBarItem tag="3" title="MORE" image="photos.png" id="YU6-IV-OVb"/>
+                                    <tabBarItem tag="4" title="Undo" image="undo.png" id="t2o-Ds-pha"/>
+                                </items>
+                                <color key="tintColor" red="0.11582446809999999" green="0.11582446809999999" blue="0.11582446809999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4SR-QJ-klP" id="7t9-xe-tmc"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MyTravels?" id="B9s-Zw-39U">
+                        <barButtonItem key="rightBarButtonItem" image="user.png" id="8Vv-x5-Nj4">
+                            <connections>
+                                <action selector="selectImage:" destination="4SR-QJ-klP" id="cIS-kS-Uvn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backView" destination="vsT-vD-b2y" id="tlb-5H-59t"/>
+                        <outlet property="bgimageView" destination="hnU-qQ-6vb" id="s0f-0C-hcT"/>
+                        <outlet property="erserSlider" destination="228-ym-iCs" id="tAL-ec-moa"/>
+                        <outlet property="scrollView" destination="C7H-Je-t40" id="Db6-AE-b9k"/>
+                        <outlet property="tabBar" destination="kfF-ek-bIC" id="e5m-Dy-Z1S"/>
+                        <segue destination="cAP-BV-PDW" kind="push" id="cZA-Ol-rSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKb-4W-4b8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="-51"/>
+        </scene>
+        <!--Frame Caption View Controller - Frame/Caption/Text-->
+        <scene sceneID="k2e-WH-jZ7">
+            <objects>
+                <viewController storyboardIdentifier="FrameCaption_iPhone5" id="cAP-BV-PDW" customClass="FrameCaptionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wty-8o-IGf">
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Qns-Jb-o1a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="NAT-0f-G9X">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" id="XC5-M7-roB">
+                                <rect key="frame" x="0.0" y="475" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Move" image="hand.png" id="W9i-G5-Nfw"/>
+                                    <tabBarItem tag="1" title="Caption" image="speechmedia.png" id="ulR-j8-26k"/>
+                                    <tabBarItem tag="2" title="Text" image="icon_fonts.png" id="d39-1P-sfv"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="cAP-BV-PDW" id="l9i-UD-PdY"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Frame/Caption/Text" id="oJe-18-EWv"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backView" destination="Qns-Jb-o1a" id="2Dn-lI-FzE"/>
+                        <outlet property="bgimageView" destination="NAT-0f-G9X" id="Y3J-dA-n4L"/>
+                        <segue destination="K4r-kl-Pw6" kind="push" id="GAB-bn-y02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzv-GY-Bg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-51"/>
+        </scene>
+        <!--Font View Controller - Font-->
+        <scene sceneID="whH-Q8-Ue7">
+            <objects>
+                <viewController storyboardIdentifier="FontDetailController_iPhone5" id="K4r-kl-Pw6" customClass="FontViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cg9-O6-sk1">
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="USD-Rp-uLF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="5L3-GH-iy1">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fci-gz-6bq">
+                                            <rect key="frame" x="-1" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <pickerView key="tableFooterView" contentMode="scaleToFill" id="NgS-ON-atE">
+                                    <rect key="frame" x="0.0" y="322" width="320" height="216"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="K4r-kl-Pw6" id="7ex-ZW-QYR"/>
+                                        <outlet property="delegate" destination="K4r-kl-Pw6" id="txp-xQ-Ic7"/>
+                                    </connections>
+                                </pickerView>
+                                <connections>
+                                    <outlet property="dataSource" destination="K4r-kl-Pw6" id="vpY-2y-4Ys"/>
+                                    <outlet property="delegate" destination="K4r-kl-Pw6" id="1qD-6A-Zve"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Font" id="RF0-2P-ZMM"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fontPicker" destination="NgS-ON-atE" id="cg4-VU-cOH"/>
+                        <outlet property="fontTableView" destination="USD-Rp-uLF" id="i0S-r7-bfJ"/>
+                        <outlet property="sampleText" destination="fci-gz-6bq" id="hXm-4h-iXo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCR-fb-5mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="-50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Erase.png" width="26" height="26"/>
+        <image name="Unerase.png" width="26" height="26"/>
+        <image name="hand.png" width="25" height="26"/>
+        <image name="icon_fonts.png" width="30" height="30"/>
+        <image name="photos.png" width="26" height="26"/>
+        <image name="speechmedia.png" width="26" height="26"/>
+        <image name="undo.png" width="26" height="26"/>
+        <image name="user.png" width="50" height="26"/>
+    </resources>
+    <classes>
+        <class className="EditingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="eraserSliderAction:" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="backView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="bgimageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="erserSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="FontViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fontPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="fontTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="sampleText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
